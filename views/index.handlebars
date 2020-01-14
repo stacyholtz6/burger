@@ -1,3 +1,34 @@
 {{!-- set-up templates that HB can render to --}}
+{{!-- id, burger_name, devoured --}}
+<h1>Burgers!</h1>
 
-{{!-- create a button that will submit user input to database --}}
+<h2>Burgers that are not devoured!</h2>
+
+<ul>
+  {{#each burgers}}
+  {{#unless devoured}}
+  {{> burgers/burger-block devoured=true}}
+  {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Burgers that are devoured!</h2>
+
+<ul>
+  {{#each burgers}}
+  {{#if devoured}}
+  {{> burgers/burger-block devoured=false}}
+  {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="brg">Burger Name:</label>
+    <input type="text" id="brg" name="name">
+  </div>
+  {{!-- create a button that will submit user input to database --}}
+  <button type="submit">Add Burger</button>
+</form>
