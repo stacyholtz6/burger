@@ -2,9 +2,9 @@
 
 // **** change state ****
 $(function () {
-  $('.change-dvour').on('click', function (event) {
+  $('.change-devour').on('click', function (event) {
     var id = $(this).data('id');
-    var newDevour = $(this).data('newDevour');
+    var newDevour = $(this).data('newdevour');
 
     var newDevourState = {
       devoured: newDevour
@@ -49,10 +49,11 @@ $(function () {
 
     // send DELETE request
     $.ajax('/api/burgers/' + id, {
-      type: 'DELETE'
+      type: 'DELETE',
+
     }).then(
       function () {
-        console.log('deleted burger', id);
+        console.log('deleted burger' + id);
         location.reload();
       }
     );
