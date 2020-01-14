@@ -57,6 +57,7 @@ var orm = {
 
   create: function (table, cols, vals, cb) {
     // this is confusing - used cats example
+    // this is not working
     var queryString = "INSERT INTO " + table;
 
     queryString += " (";
@@ -66,8 +67,8 @@ var orm = {
     queryString += printQuestionMarks(vals.length);
     queryString += ") ";
 
-    console.log('queryString from insertOne', queryString);
-    console.log('result from insertOne', result);
+    console.log('queryString from create', queryString);
+    // console.log('result from insertOne', result);
 
     connection.query(queryString, vals, function (err, result) {
       if (err) {
@@ -75,7 +76,7 @@ var orm = {
       }
 
       cb(result);
-      console.log('result insert', result);
+      console.log('create', result);
     });
   },
 
