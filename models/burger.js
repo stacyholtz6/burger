@@ -13,26 +13,12 @@ var burger = {
     });
   },
 
-  // insertOne: function (name, cb) {
-  //   orm.insertOne('burgers', [
-  //     'burger_name', 'devoured'
-  //   ],
-  //     [name, false], cb);
-  // },
-
   update: function (objColVals, condition, cb) {
     // var condition = 'id=' + condition;
     orm.update('burgers', objColVals, condition, function (res) {
       cb(res);
     });
   },
-
-  // updateOne: function (id, cb) {
-  //   var condition = 'id=' + id;
-  //   orm.updateOne('burgers', {
-  //     devoured: true
-  //   }, condition, cb);
-  // },
 
   delete: function (condition, cb) {
     orm.delete('burgers', condition, function (res) {

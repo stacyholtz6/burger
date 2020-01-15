@@ -1,0 +1,56 @@
+body {
+  background: #159957;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #155799, #159957);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/* .jumbotron-img{
+background-image: url('/assets/img/burgerss.jpeg');
+background-size: cover;
+background-repeat: no-repeat;
+} */
+
+.jumbo-text {
+  color: #050d1a;
+  font-weight: bolder;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 5px;
+  margin: 5px;
+  /* background: #faebd7; */
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 20px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.change-devour{
+  margin: 8px;
+}
+
+.delete-burger {
+  margin-left: 5px;
+}

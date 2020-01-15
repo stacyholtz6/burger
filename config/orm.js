@@ -57,7 +57,6 @@ var orm = {
 
   create: function (table, cols, vals, cb) {
     // this is confusing - used cats example
-    // this is not working
     var queryString = "INSERT INTO " + table;
 
     queryString += " (";
